@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataPilot</title>
     <link href="./output.css" rel="stylesheet">
+    <script src="index.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    
-    <section class="lg:flex-row">
+    <nav class="flex justify-between items-center px-6 py-12  md:px-20  xl:px-32">
+        <div>
+            <a href="#home"><h3 class="text-pink-400">DataPilot</h3></a>
+        </div>
+            <ul class="menulist-desktop max-md:hidden">
+                <li><a id="menulink" class="text-pink-400 hover:text-black" href="#home">Home</a></li>
+                <li><a id="menulink" class="text-pink-400 hover:text-black" href="#features">features</a></li>
+                <li><a id="menulink" class="text-pink-400 hover:text-black" href="#testimonials">Testimonials</a></li>
+                <li><a id="menulink" class="text-pink-400 hover:text-black" href="#pricing">Pricing</a></li>
+            </ul>
+            <ul id="menulist" class="menulist-mobile md:hidden">
+                <li><a id="menulink" class="text-pink-400 hover:text-black" href="#home">Home</a></li>
+                <li><a id="menulink" class="text-pink-400 hover:text-black" href="#features">features</a></li>
+                <li><a id="menulink" class="text-pink-400 hover:text-black" href="#testimonials">Testimonials</a></li>
+                <li><a id="menulink" class="text-pink-400 hover:text-black" href="#pricing">Pricing</a></li>
+            </ul>
+        <div class="menu-icon cursor-pointer md:hidden">
+            <i class="fa-solid fa-bars fa-2xl" onclick="toggleMenu()" style="color: #ff80ff;"></i>
+        </div>
+    </nav>
+    <section id="home" class="lg:flex-row">
         <div class="text-div">
             <h1>Unlock Your Data's Potential with DataPilot</h1>
             <p class="text-lg max-w-[800px]">DataPilot simplifies data management, enabling you to harness insights effortlessly. Experience seamless integration and powerful analytics tailored for your business.</p>
@@ -19,7 +39,7 @@
             <img src="imgs/datapilot hero.png" alt="heroimg">
         </div>
     </section>
-    <section class="gap-10">
+    <section id="features" class="gap-10">
         <div class="text-div">
             <p>Features</p>
             <h2>Discover the Power of DataPilot</h2>
@@ -43,7 +63,7 @@
             </div>
         </div>
     </section>
-    <section class="items-start text-start gap-10 md:gap-14">
+    <section id="testimonials" class="items-start text-start gap-10 md:gap-14">
         <div class="w-full flex flex-col items-start gap-3">
             <h2>Customer Testimonials</h2>
             <p>DataPilot transformed our workflow efficiency!</p>
@@ -89,7 +109,7 @@
         </div>
     </div>
     </section>
-    <section class="gap-10 md:gap-14">
+    <section id="pricing" class="gap-10 md:gap-14">
         <div class="text-div">
             <p>Pricing</p>
             <h2>Pricing Plans</h2>
@@ -155,9 +175,11 @@
                     </div>
                 </div>
                 <div class="flex w-full justify-between md:flex-col md:w-fit">
-                    <div><a class="footer-link"  href="#">About</a></div>
-                    <div><a class="footer-link"  href="#">Contact</a></div>
-                    <div><a class="footer-link"  href="#">Blog</a></div>  
+                    <div><a class="footer-link"  href="#home">Home</a></div>
+                    <div><a class="footer-link"  href="#features">Features</a></div>
+                    <div><a class="footer-link"  href="#testimonials">Testimonials</a></div>  
+                    <div><a class="footer-link"  href="#pricing">Pricing</a></div>
+
                 </div>
                 <div class="flex w-full justify-between md:flex-col md:w-fit">
                     <div><a class="footer-link"  href="#">Careers</a></div>

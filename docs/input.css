@@ -37,4 +37,10 @@
     .footer-link{
         @apply text-white
     }
+    .menulist-desktop{
+        @apply flex gap-10 max-md:flex-col 
+    }
+    .menulist-mobile{
+        @apply flex flex-col gap-10 overflow-hidden absolute left-0 right-0 bg-white mt-[128px] top-0 text-center transition-all
+    }
 }

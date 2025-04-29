@@ -2,7 +2,7 @@
 
 @layer base{
     section{
-        @apply flex flex-col gap-5 items-center justify-center text-center px-6 mt-12 md:mt-14 md:px-14  
+        @apply flex flex-col gap-5 items-center justify-center text-center px-6 mt-12 md:mt-14 md:px-20  
     }
     button{
         @apply appearance-none px-6 py-4 bg-pink-400 text-white hover:rounded-4xl transition-all
@@ -11,12 +11,21 @@
         @apply text-4xl max-w-[700px] font-bold md:text-5xl xl:text-6xl
     }
     h2{
-        @apply text-3xl max-w-[700px] font-bold md:text-4xl xl:text-5xl
+        @apply text-3xl max-w-[500px] lg:max-w-[700px] font-bold md:text-4xl lg:text-5xl
+    }
+    h3{
+        @apply text-2xl font-bold md:text-3xl 
     }
 }
 
 @layer components{
     .text-div{
         @apply flex flex-col gap-5 items-center
+    }
+    .features-card{
+        @apply flex flex-col gap-3 px-6  max-w-[480px] md:px-0
+    }
+    .features-p{
+        @apply px-6
     }
 }

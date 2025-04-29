@@ -2,7 +2,7 @@
 
 @layer base{
     section{
-        @apply flex flex-col gap-5 items-center justify-center text-center px-6 mt-12 md:mt-14 md:px-20  
+        @apply flex flex-col gap-5 items-center justify-center text-center px-6 py-12 md:py-14 md:px-20  
     }
     button{
         @apply appearance-none px-6 py-4 bg-pink-400 text-white hover:rounded-4xl transition-all

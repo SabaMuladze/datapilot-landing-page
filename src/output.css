@@ -191,14 +191,23 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-center {
     justify-content: center;
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .text-start {
+    text-align: start;
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -222,19 +231,19 @@
 }
 @layer base {
   section {
-    margin-top: calc(var(--spacing) * 12);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: calc(var(--spacing) * 5);
     padding-inline: calc(var(--spacing) * 6);
+    padding-block: calc(var(--spacing) * 12);
     text-align: center;
     @media (width >= 48rem) {
-      margin-top: calc(var(--spacing) * 14);
+      padding-inline: calc(var(--spacing) * 20);
     }
     @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 20);
+      padding-block: calc(var(--spacing) * 14);
     }
   }
   button {

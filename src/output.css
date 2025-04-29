@@ -10,6 +10,8 @@
     --color-pink-400: oklch(71.8% 0.202 349.761);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
@@ -173,6 +175,9 @@
   .flex {
     display: flex;
   }
+  .max-w-\[800px\] {
+    max-width: 800px;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -182,9 +187,23 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
-  .max-lg\:mt-10 {
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .max-lg\:mt-12 {
     @media (width < 64rem) {
-      margin-top: calc(var(--spacing) * 10);
+      margin-top: calc(var(--spacing) * 12);
+    }
+  }
+  .lg\:mt-16 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:flex-row {
+    @media (width >= 64rem) {
+      flex-direction: row;
     }
   }
 }
@@ -198,9 +217,6 @@
     padding-inline: calc(var(--spacing) * 6);
     text-align: center;
     @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 12);
-    }
-    @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 14);
     }
   }
@@ -229,7 +245,7 @@
       font-size: var(--text-5xl);
       line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
-    @media (width >= 64rem) {
+    @media (width >= 80rem) {
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
     }

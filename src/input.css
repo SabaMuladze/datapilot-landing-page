@@ -5,7 +5,7 @@
         @apply flex flex-col gap-5 items-center justify-center text-center px-6 py-12 md:py-14 md:px-20  xl:px-32
     }
     button{
-        @apply appearance-none px-6 py-4 bg-pink-400 text-white hover:rounded-4xl transition-all
+        @apply appearance-none px-6 py-4 bg-pink-400 text-white hover:rounded-4xl transition-all cursor-pointer
     }
     h1{
         @apply text-4xl max-w-[700px] font-bold md:text-5xl xl:text-6xl
@@ -33,5 +33,8 @@
     }
     .pricing-p{
         @apply py-2 flex gap-5
+    }
+    .footer-link{
+        @apply text-white
     }
 }

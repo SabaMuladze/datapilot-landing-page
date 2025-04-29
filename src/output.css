@@ -183,9 +183,6 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .h-14 {
     height: calc(var(--spacing) * 14);
   }
@@ -201,14 +198,11 @@
   .max-w-\[800px\] {
     max-width: 800px;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .flex-col {
     flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -228,15 +222,11 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .gap-16 {
-    gap: calc(var(--spacing) * 16);
-  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
   }
   .text-start {
     text-align: start;
@@ -256,13 +246,6 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .md\:gap-14 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 14);
@@ -280,6 +263,16 @@
   }
   .lg\:justify-between {
     @media (width >= 64rem) {
+      justify-content: space-between;
+    }
+  }
+  .xl\:flex-nowrap {
+    @media (width >= 80rem) {
+      flex-wrap: nowrap;
+    }
+  }
+  .xl\:justify-between {
+    @media (width >= 80rem) {
       justify-content: space-between;
     }
   }
@@ -382,17 +375,37 @@
   .features-p {
     padding-inline: calc(var(--spacing) * 6);
   }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
+  .pricing-card {
+    display: flex;
+    height: 600px;
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
+    justify-content: space-between;
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+    --tw-border-style: solid;
+    border-style: solid;
+    border-color: var(--color-pink-400);
+    padding-inline: calc(var(--spacing) * 10);
+    padding-top: calc(var(--spacing) * 20);
+    padding-bottom: calc(var(--spacing) * 10);
+    text-align: start;
+    @media (width >= 48rem) {
+      width: 45%;
+    }
+  }
+  .pricing-p {
+    display: flex;
+    gap: calc(var(--spacing) * 5);
+    padding-block: calc(var(--spacing) * 2);
+  }
 }
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
+@property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -400,9 +413,8 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
+      --tw-border-style: solid;
     }
   }
 }

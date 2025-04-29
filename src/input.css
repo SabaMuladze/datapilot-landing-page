@@ -28,4 +28,10 @@
     .features-p{
         @apply px-6
     }
+    .pricing-card{
+        @apply px-10 pt-20 pb-10 border-[2px] h-[600px] md:w-[45%] border-solid border-pink-400 flex flex-col justify-between w-full max-w-[450px] text-start
+    }
+    .pricing-p{
+        @apply py-2 flex gap-5
+    }
 }

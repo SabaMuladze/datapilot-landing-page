@@ -1,6 +1,6 @@
 # DataPilot
 
-DataPilot არის სადემონსტრაციო ვებსაიტი, რომელიც შექმნილია HTML, CSS და TailwindCSS-ის გამოყენებით.
+DataPilot არის სადემონსტრაციო ვებსაიტი, რომელიც შექმნილია HTML, CSS, Javascript და TailwindCSS-ის გამოყენებით.
 
 ## 🔧 გამოყენებული ტექნოლოგიები
 
